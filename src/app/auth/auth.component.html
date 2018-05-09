@@ -1,0 +1,10 @@
+<div>
+  <button (click)="auth.facebookSignIn()">Sign In With Facebook</button>
+</div>
+
+<div>
+  <input type="email" placeholder="Email" #email>
+  <input type="password" placeholder="Password" #password>
+  <button (click)="auth.emailSignUp(email.value, password.value)">Sign Up</button>
+  <button (click)="auth.emailSignIn(email.value, password.value)">Sign In</button>
+</div>

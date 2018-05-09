@@ -1,0 +1,10 @@
+<div id="list_of_messages">
+  <app-message *ngFor="let message of messages | async"
+               [message]="message">
+  </app-message>
+</div>
+
+<div>
+  <textarea name="" id="" cols="30" rows="10" #message></textarea><br>
+  <button (click)="sendMessage(message)">Send Message</button>
+</div>

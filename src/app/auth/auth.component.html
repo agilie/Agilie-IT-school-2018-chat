@@ -8,3 +8,5 @@
   <button (click)="auth.emailSignUp(email.value, password.value)">Sign Up</button>
   <button (click)="auth.emailSignIn(email.value, password.value)">Sign In</button>
 </div>
+
+<button [routerLink]="['settings']">Go To Settings</button>

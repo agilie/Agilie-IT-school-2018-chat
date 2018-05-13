@@ -13,17 +13,16 @@ import {routes} from './routes';
 import {AuthService} from './services/auth.service';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import { MessageComponent } from './dashboard/message/message.component';
-import { SettingsComponent } from './settings/settings.component';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import {UserService} from './services/user.service';
+import {AuthGuard} from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     DashboardComponent,
-    MessageComponent,
-    SettingsComponent
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,7 @@ import {UserService} from './services/user.service';
     AngularFireDatabaseModule,
     AngularFireStorageModule
   ],
-  providers: [AuthService, UserService],
+  providers: [AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
